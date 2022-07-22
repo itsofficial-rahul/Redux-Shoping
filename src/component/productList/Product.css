@@ -7,6 +7,7 @@
   margin-left: 3%;
   margin-top: 64px;
   width: 402px;
+  margin-bottom: 15px;
   text-align: center;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -47,4 +48,53 @@
 
 .button-88:active {
   box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+/* CSS */
+.button-23 {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  margin-right: 0.5%;
+  margin-bottom: 10px;
+}
+
+.button-23:focus {
+  background-color: #ea5e70;
+  /* box-shadow: #222222 0 0 0 2px, rgba(234, 24, 24, 0.8) 0 0 0 4px; */
+  transition: box-shadow 0.2s;
+  color: white;
+}
+
+.button-23:active {
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.button-23:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
 }
