@@ -34,8 +34,9 @@ function Product() {
                     width="200px"
                     height="200px"
                     src={image}
+                    style={{ marginLeft: "24%", paddingTop: "2%" }}
                   ></img>
-                  <h2>price : {price}</h2>
+                  <h2>Price : {price}</h2>
                   <button
                     onClick={() => addItemCartHAndler(item)}
                     className="button-88"

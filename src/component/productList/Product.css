@@ -1,10 +1,16 @@
 .card_of_products {
-  border: 1px solid #daffda;
+  border: 1px solid #ecf0ec;
   display: flex;
+  width: 200px;
   flex-direction: column;
   float: left;
-  margin-left: 96px;
+  margin-left: 3%;
   margin-top: 64px;
+  width: 402px;
+  text-align: center;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .button-88 {
@@ -31,6 +37,8 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   padding-left: 55px;
+  width: 50%;
+  margin-left: 24%;
 }
 
 .button-88:hover {

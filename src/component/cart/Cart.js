@@ -5,19 +5,16 @@ import {
   DicimentQuentity,
   IncimentQuentity,
 } from "../../redux/action/AddItemInCart";
-import Razor from "../../Payment/Razor";
-import Stripe from "../../Payment/Stripe";
+
 import "./cart.css";
+import ClientAddress from "../AddressForm/ClientAddress";
 export default function Cart() {
   const dispatch = useDispatch();
   const item = useSelector((state) => state.reducer);
-  console.log(item);
-  const incrimentItemQuentity = (id) => {
-    dispatch(IncimentQuentity(id));
-  };
-  const decrimentItemQuentity = (id) => {
-    dispatch(DicimentQuentity(id));
-  };
+
+  const incrimentItemQuentity = (id) => dispatch(IncimentQuentity(id));
+
+  const decrimentItemQuentity = (id) => dispatch(DicimentQuentity(id));
 
   return (
     <div>
@@ -31,15 +28,11 @@ export default function Cart() {
                   width="200px"
                   height="200px"
                   src={item.image}
+                  style={{ marginLeft: "30%" }}
                 ></img>
-                <h2>price : {item.price * item.quentity}</h2>
-
-                <button
-                  className="button-18"
-                  onClick={() => incrimentItemQuentity(item.id)}
-                >
-                  +
-                </button>
+                <h2 style={{ marginLeft: "40px" }}>
+                  Price : {(item.price * item.quentity).toFixed(1)}
+                </h2>
                 <h2 className="qty">{item.quentity}</h2>
                 <button
                   className="button-18"
@@ -47,12 +40,20 @@ export default function Cart() {
                 >
                   -
                 </button>
-                <Razor price={item.price * item.quentity} id={item.id}></Razor>
-                {/* <Pay price={item.price * item.quentity}></Pay> */}
-                <Stripe
+
+                <button
+                  className="button-1"
+                  onClick={() => incrimentItemQuentity(item.id)}
+                >
+                  +
+                </button>
+
+                <ClientAddress
                   price={item.price * item.quentity}
                   id={item.id}
-                ></Stripe>
+                  title={item.title}
+                  image={item.image}
+                />
               </div>
             </div>
           );
