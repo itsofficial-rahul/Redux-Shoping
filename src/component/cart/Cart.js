@@ -1,5 +1,6 @@
 import { Empty } from "antd";
 import React from "react";
+import { Rate } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
   DicimentQuentity,
@@ -33,6 +34,7 @@ export default function Cart() {
                 <h2 style={{ marginLeft: "40px" }}>
                   Price : {(item.price * item.quentity).toFixed(1)}
                 </h2>
+                <Rate allowHalf defaultValue={item.rating.rate} />;
                 <h2 className="qty">{item.quentity}</h2>
                 <button
                   className="button-18"
@@ -40,14 +42,12 @@ export default function Cart() {
                 >
                   -
                 </button>
-
                 <button
                   className="button-1"
                   onClick={() => incrimentItemQuentity(item.id)}
                 >
                   +
                 </button>
-
                 <ClientAddress
                   price={item.price * item.quentity}
                   id={item.id}

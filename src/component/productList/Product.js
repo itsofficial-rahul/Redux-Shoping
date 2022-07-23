@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AddItemInCart } from "../../redux/action/AddItemInCart";
 import { debounce } from "lodash";
+import { Skeleton } from "antd";
 function Product() {
   const [product, setProduct] = useState([]);
   const [item, setItem] = useState([]);
@@ -32,7 +33,6 @@ function Product() {
     Category.push(i.category);
   });
   const filterForCategory = (category) => {
-    console.log(category);
     fetchProductApi(category);
   };
 

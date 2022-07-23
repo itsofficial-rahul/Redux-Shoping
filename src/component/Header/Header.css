@@ -1,8 +1,27 @@
 .hedaerConatiner {
-  border: 1px solid red;
-  background-color: rgb(215, 232, 226);
+  border: 1px solid rgb(238, 224, 224);
+  background-color: rgb(238 245 242);
 }
 .link_oF_Cart {
-  margin-left: 100px;
+  margin-left: 29px;
   margin-bottom: 50px;
+  font-size: 24px;
+}
+.headerContainet2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: white;
+  width: 100%;
+  padding-top: 5px;
+}
+.hederComponent {
+  margin-left: 48px;
+}
+.ant-scroll-number-only-unit {
+  font-size: large;
 }
